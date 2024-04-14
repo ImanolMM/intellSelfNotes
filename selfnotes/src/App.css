@@ -1,0 +1,476 @@
+*{
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  font-size: 0.9rem;
+}
+html{
+  background-color: transparent !important;
+  height: 100%;
+}
+body{
+  background-color:rgb(22, 22, 22);
+  padding: 0;
+  height: 100%;
+}
+.header{
+  background-color: rgb(51, 51, 51);
+  width: 100%;
+  height: 40px;
+  position: relative;
+}
+#contenedorContenedorTextoFiltros{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  margin-top: 50px;
+  background-color: transparent;
+}
+#contenedorTextoFiltros{
+  height: 40px;
+  width: 40%;
+  background-color: rgb(22, 51, 51);
+  border-width: 1px;
+  border-radius: 0.375rem;
+  display: flex;
+  align-items: center;
+}
+#textoFiltro{
+  line-height: 1.5rem;
+  margin: 0;
+  width: 100%;
+  resize: none;
+  border-width: 0;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  background-color: transparent;
+  max-height: 200px;
+  height: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  color: rgb(226, 227, 227);
+
+
+}
+#contenedorNotas{
+  background-color:transparent;
+  width: 100%;
+  height: auto;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#botonAñadirNota{
+  border-radius:8%;
+  height:150px;
+  width: 270px;
+  border: none;
+  background-color: rgb(22, 51, 51);
+  color: rgb(128, 129, 129);
+  margin-top: 20px;
+  margin-left: 20px;
+}
+#botonAñadirNota.oculto{
+  display: none;
+}
+.nota {
+  border-radius: 15px;
+  height: 150px;
+  width: 270px;
+  border: none;
+  background-color: rgb(22, 51, 51);
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  color: rgb(226, 227, 227);
+  transition: all .3s ease-in;
+}
+.nota.oculta{
+  display: none;
+}
+.contenedorPartesNota{
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+
+}
+.contenedorParteIzquierdaNota{
+  height: 100%;
+  width: 160px;
+  background-color: transparent;
+  padding-left: 10px;
+  padding-top: 15px;
+  padding-right: 15px;
+}
+.contenedorParteDerechaNota{
+  height: 100%;
+  width: 110px;
+  background-color: transparent;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+
+}
+.contenedorFechasbarra{
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+
+}
+.contenedorFechasBarraAmpliada{
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.tituloTituloNota{
+  width: 100%;
+  padding-bottom: 6px;
+  color: rgb(226, 227, 227);
+}
+.tituloNota{
+  color: rgb(187, 188, 188);
+  width: 100%;
+  box-sizing: border-box;
+  outline: 2px solid transparent;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.tituloAnotaciones{
+  width: min-content;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  color: rgb(226, 227, 227);
+
+}
+.anotaciones {
+  color: rgb(187, 188, 188);
+  width: 100%;
+  outline: 2px solid transparent;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  word-break: break-word;
+}
+.tituloFechaInicio{
+  width: 100%;
+  padding-bottom: 6px;
+  color: rgb(226, 227, 227);
+}
+.fechaInicio{
+  color: rgb(187, 188, 188);
+  width: 100%;
+  box-sizing: border-box;
+  outline: 2px solid transparent;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.tituloFechaFinal{
+  width: 100%;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  color: rgb(226, 227, 227);
+}
+.fechaFinal{
+  color: rgb(187, 188, 188);
+  width: 100%;
+  box-sizing: border-box;
+  outline: 2px solid transparent;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.contenedorBotonesNotas{
+  width: 100%;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+.botonEditar{
+  background: transparent url('img/modificar.png') no-repeat center center;
+  width: 17px;
+  height: 17px;
+  border: none;
+  cursor: pointer;
+  background-size: contain;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.botonEliminar{
+  background: transparent url('img/eliminar.png') no-repeat center center;
+  width: 15px;
+  height: 15px;
+  border: none;
+  cursor: pointer;
+  background-size: contain;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.botonAmpliar{
+  background: transparent url('img/ampliar.png') no-repeat center center;
+  width: 17px;
+  height: 17px;
+  border: none;
+  cursor: pointer;
+  background-size: contain;
+}
+.contenedorBarraImportancia {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.barraImportancia {
+  background-color: #a52929;
+  width: 20%;
+  border-radius: 10px;
+  animation: grow 1.5s ease-out forwards;
+  transform-origin: bottom;
+  align-self: end;
+}
+.contenedorBarraImportanciaAmpliadaFuera {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.contenedorBarraImportanciaAmpliadaTrozos {
+  position: relative;
+}
+
+.contenedorTrozosAmpliada {
+  display: flex;
+  flex-direction: column;
+  width: 15px;
+}
+
+.trozoBarraAmpliada {
+  background-color: transparent;
+  width: 15px;
+  height: 40px;
+  z-index: 2; /* Aumentamos el z-index para que los trozos se superpongan */
+  border-top: 1px solid black;
+}
+
+.contenedorBarraImportanciaAmpliada{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: rgba(94, 94, 94, 0.26);
+  border-radius: 10px;
+}
+.barraImportanciaAmpliada {
+  width: 15px;
+  border-radius: 10px;
+  align-self: end;
+  transition: height 0.2s cubic-bezier(0, 0.87, 0.23, 1.04), background-color 0.8s ease-in-out;
+  z-index: 1; /* Aseguramos que la barra de importancia esté detrás de los trozos */
+}
+
+@keyframes grow {
+  from {
+    transform: scaleY(0);
+  }
+}
+
+.eliminarTabAnimacion {
+  animation-name: desvanecer;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+.contenedorNotaAmpliada {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(5px);
+}
+.notaAmpliada{
+  border-radius: 30px;
+  border: none;
+  background-color: rgb(22, 51, 51);
+  color: rgb(226, 227, 227);
+  transition: all .3s ease-in;
+  position: absolute;
+  height: 450px;
+  width: 810px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.contenedorPartesNotaAmpliada{
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+}
+.contenedorParteIzquierdaNotaAmpliada{
+  height: 100%;
+  width: 580px;
+  background-color: transparent;
+  padding-left: 50px;
+  padding-top: 50px;
+}
+.contenedorParteDerechaNotaAmpliada{
+  height: 100%;
+  width: 230px;
+  background-color: transparent;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.tituloTituloNotaAmpliada{
+  font-size: 1.5rem;
+  width: 100%;
+  padding-bottom: 8px;
+  color: rgb(226, 227, 227);
+
+}
+.tituloNotaAmpliada {
+  font-size: 1.5rem;
+  color: rgb(187, 188, 188);
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  resize: none;
+}
+
+.tituloAnotacionesAmpliada{
+  font-size: 1.5rem;
+  width: min-content;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: rgb(226, 227, 227);
+
+}
+.anotacionesAmpliada{
+  font-size: 1.5rem;
+  color: rgb(187, 188, 188);
+  width: 100%;
+  height: 40%;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  resize: none;
+}
+.tituloFechaInicioAmpliada{
+  font-size: 1.5rem;
+  width: 100%;
+  padding-right: 10px;
+  padding-bottom: 8px;
+  color: rgb(226, 227, 227);
+}
+.fechaInicioAmpliada{
+  font-size: 1.5rem;
+  color: rgb(187, 188, 188);
+  width: 100%;
+  box-sizing: border-box;
+  outline: 2px solid transparent;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background-color: transparent;
+  border: transparent;
+}
+.tituloFechaFinalAmpliada{
+  font-size: 1.5rem;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: rgb(226, 227, 227);
+}
+.fechaFinalAmpliada{
+  font-size: 1.5rem;
+  color: rgb(187, 188, 188);
+  width: 100%;
+  box-sizing: border-box;
+  outline: 2px solid transparent;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background-color: transparent;
+  border: transparent;
+}
+.contenedorBotonesNotaAmpliada{
+  width: 100%;
+  height: 39px;
+  display: flex;
+  align-items:center;
+  margin-top: 135px;
+  margin-bottom: 30px;
+  padding-left: 65px;
+}
+.botonEditarNotaAmpliada{
+  background: transparent url('img/modificar.png') no-repeat center center;
+  width: 20px;
+  height: 20px;
+  border: none;
+  cursor: pointer;
+  background-size: contain;
+  scale: 1.5;
+  margin-left: 15px;
+}
+.botonEditarNotaAmpliada.activo{
+  background: transparent url('img/modificarActivo.png') no-repeat center center;
+}
+.botonEliminarNotaAmpliada{
+  background: transparent url('img/eliminar.png') no-repeat center center;
+  width: 20px;
+  height: 20px;
+  border: none;
+  cursor: pointer;
+  background-size: contain;
+  scale: 1.5;
+  margin-left: 20px;
+}
+.botonAmpliarNotaAmpliada{
+  background: transparent url('img/ampliar.png') no-repeat center center;
+  width: 20px;
+  height: 20px;
+  border: none;
+  cursor: pointer;
+  background-size: contain;
+  scale: 1.5;
+  margin-left: 20px;
+}
+
+@keyframes desvanecer {
+  0% {opacity: 1; transform: translateX(0);}
+  100% {opacity: 0; transform: translateX(-25px);}
+}
+.añadirTabAnimacion {
+  animation-name: aparecer;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes aparecer {
+  0% {opacity: 0; transform: translateX(-4px);}
+  100% {opacity: 1; transform: translateX(0px);}
+}
+
